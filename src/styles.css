@@ -1,0 +1,32 @@
+/* register css */
+
+body {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+h2::first-letter {
+	text-transform: capitalize;
+}
+.content {
+	display: flex;
+	justify-content: space-between;
+	width: 80%;
+}
+
+/* form css */
+form {
+	font-family: 'Raleway', sans-serif;
+}
+div {
+	display: flex;
+	flex-direction: column;
+	margin: 20px;
+}
+input {
+	margin-top: 10px;
+}
+.ttcontent {
+	display: flex;
+	flex-direction: row;
+}

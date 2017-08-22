@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css"
+        integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w"
+        crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sign Up Form</title>
+</head>
+
+<body>
+    <div class="content_form">
+        <form name="signup" class="pure-form pure-form-stacked">
+            <div class="adult">
+                <label for="adultfname">Your First Name</label>
+                <input id="adultfname" autofocus type="text" required name="adultfname" />
+                <br />
+                <label for="adultsurname">Your Surname</label>
+                <input id="adultsurname" type="text" required name="adultsurname" />
+                <br/>
+                <label for="email">Your Email</label>
+                <input id="email" type="email" required />
+                <br />
+                <label for="phone">Phone Number</label>
+                <input id="phone" type="tel" required />
+                <br/>
+            </div>
+            <div class="pupil">
+                <label for="childfname">Child's First Name</label>
+                <input id="childfname" type="text" required />
+                <br />
+                <label for="childsurname">Child's Surname</label>
+                <input id="childsurname" type="text" required />
+                <br />
+                <label for="dob">Child's D.O.B</label>
+                <input id="dob" type="date" required />
+                <br />
+                <div id="medical">
+                    <label for="allergies">Does your child have any allergies?</label>
+                    <div id="allergies">
+                        <label for="yes" class="pure-radio">
+						<input name="allergies" id="yes" type="radio" value="true" required />
+                        Yes
+                        </label>
+                        <label for="no" class="pure-radio">
+						<input name="allergies" id="no" type="radio" value="true" required />
+                        No
+                        </label>
+                    </div>
+                    <label for="allergydetails">Details</label>
+                    <textarea id="allergydetails"></textarea><br />
+
+                </div>
+            </div>
+
+
+            <div class="days">
+                <label for="days">What day(s) would you like?</label>
+                <ul style="list-style-type:none">
+                    <li>
+                        <input type="checkbox" name="days" value="monday"> Monday<br>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="days" value="tuesday"> Tuesday<br>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="days" value="wednesday"> Wednesday<br>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="days" value="thursday"> Thursday<br>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="days" value="friday"> Friday<br>
+                    </li>
+                </ul>
+                <label for="startdate">When would you like to start?</label>
+                <input type="date" id="startdate" />
+            </div>
+            <div id="photos">
+                <label for="photos">From time to time we add posts to our Facebook page. Is it OK to include photos of your child?</label>
+                <div id="photos">
+                    <label for="yes" class="pure-radio">
+						<input name="photos" id="yes" type="radio" value="true" required />
+                        Yes
+                        </label>
+                    <label for="no" class="pure-radio">
+						<input name="photos" id="no" type="radio" value="true" required />
+                        No
+                        </label>
+                </div>
+            </div>
+            <div class="submit">
+                <input type="submit" class="pure-button pure-button-primary submit-btn">
+            </div>
+
+        </form>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyB4XgZiYZtcKiKE6evU1NaAny_kpLVocd8",
+            authDomain: "seaview-register.firebaseapp.com",
+            databaseURL: "https://seaview-register.firebaseio.com",
+            storageBucket: "seaview-register.appspot.com",
+            messagingSenderId: "157351311957"
+        };
+        firebase.initializeApp(config);
+
+    </script>
+<script type="text/javascript" src="app.js"></script></body>
+
+</html>
+
