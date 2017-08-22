@@ -21,17 +21,24 @@ const commonConfig = merge([
 	plugins: [
 		new HtmlWebpackPlugin({
 			title: 'Seaview Signup',
-			template: './src/index.html'
+			template: './src/index.html',
 		}),
 	],
 	},
 	parts.lintJavaScript({include: PATHS.app}),
+	parts.loadJavaScript({include: PATHS.app}),
 ]);
 
 const productionConfig = merge([
+	parts.clean(PATHS.build),
+	parts.minifyJavaScript(),
 	parts.extractCSS({use: 'css-loader'}),
 	parts.purifyCSS({
-		paths: glob.sync(`${PATHS.app}/**/*.js`, {nodir: true}),
+		paths: glob.sync(`${PATHS.app}/**/*.js`,
+			{
+				nodir: true,
+				whitelist: ['*button*'],
+			}),
 	}),
 ]);
 
@@ -44,7 +51,7 @@ const developmentConfig = merge([
 ]);
 
 module.exports = (env) => {
-	if(env === 'production') {
+	if (env === 'production') {
 		return merge(commonConfig, productionConfig);
 	}
 	return merge(commonConfig, developmentConfig);

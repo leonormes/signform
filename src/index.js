@@ -2,6 +2,7 @@
 import './styles.css';
 import $ from 'jquery';
 import 'purecss';
+
 $('form').submit(function(e) {
 	e.preventDefault();
 	const formData = document.signup.elements;

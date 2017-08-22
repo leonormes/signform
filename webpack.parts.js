@@ -1,6 +1,7 @@
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const PurifyCSSPlugin = require('purifycss-webpack');
-
+const CleanWebpackPlugin = require('clean-webpack-plugin');
+const BabiliPlugin = require('babili-webpack-plugin');
 exports.devServer = ({host, port} = {}) => ({
 	devServer: {
 		historyApiFallback: true,
@@ -67,5 +68,33 @@ exports.extractCSS = ({include, exclude, use}) => {
 exports.purifyCSS = ({paths}) => ({
 	plugins: [
 		new PurifyCSSPlugin({paths}),
+	],
+});
+
+exports.loadJavaScript = ({include, exclude}) => ({
+	module: {
+		rules: [
+			{
+				test: /\.js$/,
+				include,
+				exclude,
+				loader: 'babel-loader',
+				options: {
+					cacheDirectory: true,
+				},
+			},
+		],
+	},
+});
+
+exports.clean = (path) => ({
+	plugins: [
+		new CleanWebpackPlugin([path]),
+	],
+});
+
+exports.minifyJavaScript = () => ({
+	plugins: [
+		new BabiliPlugin(),
 	],
 });
