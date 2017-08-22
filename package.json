@@ -24,6 +24,7 @@
     "html-webpack-plugin": "^2.30.1",
     "nodemon": "^1.11.0",
     "prepack-webpack-plugin": "^1.1.0",
+    "protractor": "^5.1.2",
     "purify-css": "^1.2.5",
     "purifycss-webpack": "^0.7.0",
     "style-loader": "^0.18.2",
