@@ -1,40 +1,44 @@
 {
-  "name": "signform",
-  "version": "0.0.1",
-  "description": "Sign up form for Seaview",
-  "main": "index.js",
-  "scripts": {
-    "start": "nodemon --watch webpack.config.js --exec webpack-dev-server --env development",
-    "build": "webpack --env production"
-  },
-  "author": "Leon Ormes <leonormes@gmail.com>",
-  "license": "ISC",
-  "dependencies": {
-    "eslint-config-google": "^0.9.1",
-    "jquery": "^3.2.1",
-    "purecss": "^1.0.0"
-  },
-  "devDependencies": {
-    "babel-core": "^6.26.0",
-    "babel-loader": "^7.1.2",
-    "babel-preset-env": "^1.6.0",
-    "babili-webpack-plugin": "^0.1.2",
-    "clean-webpack-plugin": "^0.1.16",
-    "css-loader": "^0.28.5",
-    "eslint": "^4.5.0",
-    "eslint-loader": "^1.9.0",
-    "eslint-plugin-import": "^2.7.0",
-    "extract-text-webpack-plugin": "^3.0.0",
-    "glob": "^7.1.2",
-    "html-webpack-plugin": "^2.30.1",
-    "nodemon": "^1.11.0",
-    "prepack-webpack-plugin": "^1.1.0",
-    "protractor": "^5.1.2",
-    "purify-css": "^1.2.5",
-    "purifycss-webpack": "^0.7.0",
-    "style-loader": "^0.18.2",
-    "webpack": "^3.5.5",
-    "webpack-dev-server": "^2.7.1",
-    "webpack-merge": "^4.1.0"
-  }
+    "name": "signform",
+    "version": "0.0.1",
+    "description": "Sign up form for Seaview",
+    "main": "index.js",
+    "scripts": {
+        "start": "nodemon --watch webpack.config.js --exec webpack-dev-server --env development",
+        "protractor": "babel-node node_modules/.bin/protractor conf.js",
+        "build": "webpack --env production"
+    },
+    "author": "Leon Ormes <leonormes@gmail.com>",
+    "license": "ISC",
+    "dependencies": {
+        "eslint-config-google": "^0.9.1",
+        "jquery": "^3.2.1",
+        "purecss": "^1.0.0"
+    },
+    "devDependencies": {
+        "babel-core": "^6.26.0",
+        "babel-loader": "^7.1.2",
+        "babel-preset-env": "^1.6.0",
+        "babili-webpack-plugin": "^0.1.2",
+        "chromedriver": "^2.31.0",
+        "clean-webpack-plugin": "^0.1.16",
+        "css-loader": "^0.28.5",
+        "eslint": "^4.5.0",
+        "eslint-loader": "^1.9.0",
+        "eslint-plugin-import": "^2.7.0",
+        "extract-text-webpack-plugin": "^3.0.0",
+        "glob": "^7.1.2",
+        "html-webpack-plugin": "^2.30.1",
+        "jasmine-spec-reporter": "^4.2.1",
+        "nodemon": "^1.11.0",
+        "prepack-webpack-plugin": "^1.1.0",
+        "protractor": "^5.1.2",
+        "purify-css": "^1.2.5",
+        "purifycss-webpack": "^0.7.0",
+        "style-loader": "^0.18.2",
+        "webpack": "^3.5.5",
+        "webpack-dev-server": "^2.7.1",
+        "webpack-merge": "^4.1.0"
+    }
 }
+
